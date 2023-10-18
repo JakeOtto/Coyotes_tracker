@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import csv
+
+# want to help or improve, please us readme for scope and intentions. 
 
 # set url
 news_url = 'https://www.arizonacoyotes.com/news'
@@ -25,11 +28,22 @@ for article in news_articles:
         youtube_links = re.findall(r'(https://www.youtube.com/watch\?v=[\w-]+)', str(article_content))
         game_highlight_links.extend(youtube_links)
 
-# Step 5: Post the links to a location of your choice
+# post the links to the csv file - can change this to wherever
 if game_highlight_links:
-    # You can print the links or save them to a file, database, etc.
-    for link in game_highlight_links:
-        print(link)
+
+    
+    # i could have done this as - writer.writerows(game_highlight_links) -
+
+    # opening the file
+    with open("coyotes_news.csv", "w", newline="") as cn_news:
+        for link in game_highlight_links:
+            # creating the writer
+            writer = csv.writer(cn_news)
+            # using writerow to write individual record one by one
+            writer.writerow([link])
+        # close the writer and file 
+        cn_news.close()
+
 else:
     print("No game highlight links found.")
 
