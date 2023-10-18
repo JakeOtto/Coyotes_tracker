@@ -35,14 +35,14 @@ if game_highlight_links:
     # i could have done this as - writer.writerows(game_highlight_links) -
 
     # opening the file
-    with open("coyotes_news.csv", "w", newline="") as cn_news:
+    with open("coyotes_links.csv", "w", newline="") as cn_links:
         for link in game_highlight_links:
             # creating the writer
-            writer = csv.writer(cn_news)
+            writer = csv.writer(cn_links)
             # using writerow to write individual record one by one
             writer.writerow([link])
         # close the writer and file 
-        cn_news.close()
+        cn_links.close()
 
 else:
     print("No game highlight links found.")
