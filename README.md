@@ -1,6 +1,12 @@
 ## Coyotes_tracker
 hit me up - lend a hand - steal away
 
+# to use -
+(skip requirements if you already got beautifulsoup4 - bs4)
+pip install -r requirements.txt
+python coyote_scrape.py
+
+
 # Purpose - 
 Little scraper app to find info about arizona coyotes and link to their uploaded highlights
 
