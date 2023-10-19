@@ -1,21 +1,21 @@
-## Coyotes_tracker
+# Coyotes_tracker
 hit me up - lend a hand - steal away
 
-# to use -
+## To use -
 (skip requirements if you already got beautifulsoup4 - bs4)
 pip install -r requirements.txt
 python coyote_scrape.py
 
 
-# Purpose - 
+## Purpose - 
 Little scraper app to find info about arizona coyotes and link to their uploaded highlights
 
-# Learning Objective -
+## Learning Objective -
 This project is ment to develop understanding and a practicle knowledge of using the Beautiful Soup Python Library.
 
-# Extentions - 
+## Extentions - 
 I will look to add a twillio component to this app, allowing SMS/whatsapp updates with news headlines and links.
 
-# Current -
+## Current -
 implement saving data to a csv file, (leaving highlights to be sent on twillio in extention)
 containerizing the whole thing
